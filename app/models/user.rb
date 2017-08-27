@@ -18,7 +18,7 @@ class User < ApplicationRecord
       self.relationships.find_or_create_by(follow_id: other_user.id)
     end
   end
-
+  
 
   def unfollow(other_user)
     relationship = self.relationships.find_by(follow_id: other_user.id)
